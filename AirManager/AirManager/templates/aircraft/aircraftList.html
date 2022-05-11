@@ -7,9 +7,11 @@
   <body>
       <h1>Aircraft Organizer</h1>
       <u1>
-          {% for ac in AircraftData %}
-          <li>{{ac.name}}</li>
+          {% for ac in aircraftData %}
+          <li><a href={{ac.id}}>{{ac.name}}</li>
           {% endfor %}
       </ul>
+      <br>
+      <a href='/aircraft/addAC'> Add an RC aircraft</a>
     <body>
 <html>
