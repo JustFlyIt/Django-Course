@@ -20,5 +20,8 @@ from AirManager import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home),
-    path('aircraft/', views.aircraft)
+    path('aircraft/', views.aircraft),
+    path('aircraft/<int:id>', views.acDetail),
+    path('aircraft/addAC', views.addAC),
+    path('aircraft/deleteAC/<int:id>', views.deleteAC)
 ]
