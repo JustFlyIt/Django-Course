@@ -16,9 +16,10 @@ def acDetail(request, id):
 def addAC(request):
     name = request.POST.get('name')
     type = request.POST.get('type')
+    channels = request.POST.get("channels")
 
     if name and type:
-            ac = Aircraft(name=name, type=type)
+            ac = Aircraft(name=name, type=type, channels=channels)
             ac.save()
             return HttpResponseRedirect('/aircraft')
 
